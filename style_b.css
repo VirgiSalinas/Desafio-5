@@ -1,0 +1,316 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section (ocupa el 100% del viewport) */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Ajusta la altura según necesites */
+  overflow: hidden;
+}
+
+/* Título superpuesto */
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 65px;
+  text-align: center;
+  z-index: 10; /* Asegura que esté encima del carrusel */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  position: absolute;
+  top: 70%; /* Colocado debajo del h1 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 15; /* Menor que h1 pero mayor que imágenes */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  padding: 0 20px;
+  font-style: italic; /* Para las comillas */
+}
+
+/* Carrusel (ocupa el 100% del hero) */
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+/* Animación del carrusel (CSS-only) */
+@keyframes slide {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+}
+
+.carousel-inner {
+  animation: slide 15s infinite; /* 3 imágenes x 3s cada una */
+}
+
+/*cards venta de frutas*/
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: white;
+    border-top: 5px solid var(--card-accent);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--card-color);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card h3 {
+    color: var(--card-accent);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-features {
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+}
+
+.card-features li {
+    margin-bottom: 0.8rem;
+    color: #444;
+    position: relative;
+}
+
+.card-features li::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--card-color);
+    border-radius: 50%;
+    position: absolute;
+    left: -1.2rem;
+    top: 8px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: linear-gradient(to right, var(--card-color), #f9f9f9);
+}
+
+.price {
+    font-weight: bold;
+    color: var(--card-accent);
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    background: var(--card-accent);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #333;
+}
+
+
+/* Sección Nosotros */
+.about-section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #f9f9f9, #fff);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.fruit-decoration {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.fruit-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Grid adaptable */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Cards de información */
+.about-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-card h3 {
+    color: #444;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.about-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.values-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.values-list li {
+    margin-bottom: 0.8rem;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+.values-list li::before {
+    content: "•";
+    color: var(--card-accent);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+/* Card de ubicación */
+.location-card {
+    grid-column: span 2;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #4CAF50; /* Verde para contraste */
+}
+
+.location-card h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.location-info {
+    margin-top: 1.5rem;
+    background: #f5f5f5;
+    padding: 1.2rem;
+    border-radius: 8px;
+}
+
+.location-info p {
+    margin: 0.5rem 0;
+    color: #444;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-cards {
+        grid-template-columns: 1fr;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .location-card {
+        grid-column: span 1;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
