@@ -3,20 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style_b.css" />
     <title>HBA</title>
   </head>
   <body>
-    <header><!-- No olvidarme de arreglar esto -->
-      <img class="hba-logo" src="" alt="" />
-      <nav>
-        <ul><!-- PONER LOS HIPERVINCULOS -->
-          <li>Productos</li>
-          <li>Nosotros</li>
-          <li>¿Por que elegirnos?</li>
-        </ul>
-        <button class="contact">Contacto</button>
-      </nav>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <!-- Imagen del logo (comentar mientras no se tenga) -->
+                    <!-- <img src="img/logo-hba.png" alt="HBACongelados" class="logo-img"> -->
+                    
+                    <!-- Texto como fallback (o para usar junto al logo) -->
+                    <span class="logo-text">HBACongelados</span>
+                </a>
+            </div>
+    
+            <!-- Menú para desktop -->
+            <ul class="nav-links">
+              <li><a href="#productos" class="nav-link nav-link--frutilla">Productos</a></li>
+              <li><a href="#nosotros" class="nav-link nav-link--maracuya">Nosotros</a></li>
+              <li><a href="#porque-elegirnos" class="nav-link nav-link--kiwi">¿Por qué elegirnos?</a></li>
+          </ul>
+    
+            <!-- Botón de contacto -->
+            <a href="#contacto" class="contact-btn">Contacto</a>
+    
+            <!-- Menú hamburguesa para mobile -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
     </header>
 
     <section class="hero">
@@ -33,14 +53,14 @@
             <img src="imagenes/frutilla-hero.jpg" alt="Imagen 2" />
           </div>
           <div class="carousel-item">
-            <img src="imagenes/maracuya-hero.jpg" alt="Imagen 3" />
+            <img src="imagenes/maracuya-hero3.jpg" alt="Imagen 3" />
           </div>
         </div>
       </div>
     </section>
-    <section class="product-cards">
+    <section class="product-cards" id="productos">
       <!-- Card 1: Pulpa de Maracuyá -->
-      <div class="card" style="--card-color: #ffd700; --card-accent: #ffa500">
+      <div class="card" style="--card-color: #FCF259; --card-accent: #ffa500">
         <div class="card-header">
           <img
             src="imagenes/maracuya-producto.jpg"
@@ -56,7 +76,7 @@
           </ul>
         </div>
         <div class="card-footer">
-          <span class="price">$8.990/kg</span>
+          <span class="price">$6.198,35/kg + IVA</span>
           <button class="cta-button">Consultar stock</button>
         </div>
       </div>
@@ -78,7 +98,7 @@
           </ul>
         </div>
         <div class="card-footer">
-          <span class="price">$12.490/kg</span>
+          <span class="price">$3.553,72/kg + IVA</span>
           <button class="cta-button">Consultar stock</button>
         </div>
       </div>
@@ -100,7 +120,7 @@
           </ul>
         </div>
         <div class="card-footer">
-          <span class="price">$15.990/kg</span>
+          <span class="price">$6.198,35/kg + IVA</span>
           <button class="cta-button">Consultar stock</button>
         </div>
       </div>
@@ -108,7 +128,8 @@
     <section class="about-section" id="nosotros">
       <!-- Título con efecto frutal -->
       <div class="section-header">
-        <h2>NOSOTROS</h2><!-- SACAR EL FONDO -->
+        <h2>NOSOTROS</h2>
+        <!-- SACAR EL FONDO -->
         <div class="fruit-decoration">
           <span class="fruit-dot" style="background: #ff6b6b"></span>
           <!-- Frutilla -->
@@ -135,8 +156,8 @@
           <h3>Visión</h3>
           <p>
             Ser líderes en innovación de productos frutales congelados en el
-            NEA, con procesos sostenibles que beneficien a
-            agricultores y clientes.
+            NEA, con procesos sostenibles que beneficien a agricultores y
+            clientes.
           </p>
         </div>
 
@@ -150,28 +171,248 @@
             <li><strong>Innovación:</strong> I+D constante</li>
           </ul>
         </div>
+    </section>
+    <section class="why-us" id="porque-elegirnos">
+      <div class="section-header">
+        <h2>¿POR QUÉ ELEGIR <span>HBA CONGELADOS</span>?</h2>
+        <div class="fruit-decoration">
+          <span class="fruit-dot" style="background: #ff6b6b"></span>
+          <span class="fruit-dot" style="background: #6b5b95"></span>
+          <span class="fruit-dot" style="background: #ffd700"></span>
+        </div>
+      </div>
 
-        <!-- Ubicación -->
-        <div class="location-card"><!-- ARREGLAR ESTO DESPUES CON JULIAN -->
-          <h3>¿Dónde nos encontramos?</h3>
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d[LATITUD]!2d[LONGITUD]!3d[ZOOM]!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDQzJzQxLjgiTiA2McKwNDcnNDEuNiJX!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar"
-              width="100%"
-              height="300"
-              style="border: 0; border-radius: 8px"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-          <div class="location-info">
+      <div class="advantages-grid">
+        <!-- Ventaja 1 -->
+        <div class="advantage-card" style="--fruit-color: #ff6b6b">
+          <div class="advantage-icon">❄️</div>
+          <h3>Tecnología IQF Superior</h3>
+          <p>
+            Congelación Individual Rápida que preserva el sabor, textura y
+            nutrientes de cada fruta como si estuviera recién cosechada.
+          </p>
+          <div class="fruit-underline" style="background: #ff6b6b"></div>
+        </div>
+
+        <!-- Ventaja 2 -->
+        <div class="advantage-card" style="--fruit-color: #6b5b95">
+          <div class="advantage-icon">🏆</div>
+          <h3>Certificaciones Internacionales</h3>
+          <p>
+            Contamos con HACCP, BRCGS y USDA Organic. Garantía de calidad y
+            seguridad alimentaria para mercados exigentes.
+          </p>
+          <div class="fruit-underline" style="background: #6b5b95"></div>
+        </div>
+
+        <!-- Ventaja 3 -->
+        <div class="advantage-card" style="--fruit-color: #ffd700">
+          <div class="advantage-icon">🚜</div>
+          <h3>Trazabilidad Total</h3>
+          <p>
+            Sabes exactamente qué campo cultivó tus frutas. Implementamos
+            blockchain para seguimiento desde la semilla.
+          </p>
+          <div class="fruit-underline" style="background: #ffd700"></div>
+        </div>
+
+        <!-- Ventaja 4 -->
+        <div class="advantage-card" style="--fruit-color: #4caf50">
+          <div class="advantage-icon">♻️</div>
+          <h3>Sostenibilidad Real</h3>
+          <p>
+            Energía solar en planta, packaging biodegradable y apoyo a
+            comunidades agrícolas locales.
+          </p>
+          <div class="fruit-underline" style="background: #4caf50"></div>
+        </div>
+
+        <!-- Ventaja 5 -->
+        <div class="advantage-card" style="--fruit-color: #e91e63">
+          <div class="advantage-icon">📦</div>
+          <h3>Logística Confiable</h3>
+          <p>
+            Cadena de frío garantizada y entregas programadas para industrias
+            con producción just-in-time.
+          </p>
+          <div class="fruit-underline" style="background: #e91e63"></div>
+        </div>
+
+        <!-- Ventaja 6 -->
+        <div class="advantage-card" style="--fruit-color: #9c27b0">
+          <div class="advantage-icon">🔬</div>
+          <h3>Innovación Constante</h3>
+          <p>
+            Desarrollamos cortes especiales y blends exclusivos para
+            aplicaciones industriales específicas.
+          </p>
+          <div class="fruit-underline" style="background: #9c27b0"></div>
+        </div>
+      </div>
+
+      <!-- Testimonios -->
+      <div class="testimonials">
+        <h3>Lo que dicen nuestros clientes</h3>
+        <div class="testimonial-cards">
+          <div class="testimonial" style="border-left: 4px solid #ff6b6b">
             <p>
-              📍 <strong>Planta industrial:</strong> Ruta 205 Km 12.5,
-              Montevideo, Uruguay
+              "El color y sabor de sus frutillas IQF elevó nuestra línea de
+              yogures premium."
             </p>
+            <div class="client">- Ana L., Product Manager Lácteos</div>
+          </div>
+          <div class="testimonial" style="border-left: 4px solid #6b5b95">
+            <p>
+              "Su sistema de trazabilidad nos ayudó a cumplir con regulaciones
+              europeas sin problemas."
+            </p>
+            <div class="client">- Carlos T., Export Manager</div>
           </div>
         </div>
       </div>
     </section>
+    <section class="contact-section" id="contacto">
+      <div class="section-header">
+        <h2>CONTACTO</h2>
+        <div class="fruit-decoration">
+          <span class="fruit-dot" style="background: #ff6b6b"></span>
+          <span class="fruit-dot" style="background: #6b5b95"></span>
+          <span class="fruit-dot" style="background: #ffd700"></span>
+        </div>
+      </div>
+
+      <div class="contact-container">
+        <!-- Formulario -->
+        <div class="contact-form">
+          <form id="contactForm" action="#" method="POST">
+            <div class="form-group">
+              <label for="nombre">Nombre*</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+
+            <div class="form-group">
+              <label for="apellido">Apellido*</label>
+              <input type="text" id="apellido" name="apellido" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje*</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar Consulta</button>
+          </form>
+        </div>
+
+        <!-- Datos de Contacto -->
+        <div class="contact-info">
+          <div class="info-card" style="border-top: 4px solid #ff6b6b">
+            <h3>Información de Contacto</h3>
+            <!-- Mapa Pequeño -->
+        <div class="small-map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.1347224597366!2d-59.25214197447976!3d-29.160701975380416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944e837b9273cdc9%3A0x88770012ac77e545!2sParque%20Industrial%20Goya!5e0!3m2!1ses!2sar!4v1745697722026!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <h4>Teléfono</h4>
+                <p>+598 1234 5678</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <h4>Email</h4>
+                <p>info@hbacongelados.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">🏢</div>
+              <div>
+                <h4>Planta Industrial</h4>
+                <p>Ruta 205 Km 12.5, Montevideo, Uruguay</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">⏱️</div>
+              <div>
+                <h4>Horario de Atención</h4>
+                <p>Lunes a Viernes: 8:00 - 18:00 hs</p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Logo y derechos -->
+            <div class="footer-brand">
+                <h3>HBA Congelados</h3>
+                <p>© 2025 Todos los derechos reservados</p>
+                <p class="legal">Marca registrada ®</p>
+            </div>
+    
+            <!-- Contacto rápido -->
+            <div class="footer-contact">
+                <h4>Contacto directo</h4>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+598 1234 5678</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@hbacongelados.com</span>
+                </div>
+            </div>
+    
+            <!-- Redes sociales con Font Awesome -->
+            <div class="footer-social">
+                <h4>Seguinos</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon" style="background: #3b5998" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" style="background: #0077b5" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" style="background: #c837ab" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" style="background: #25d366" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Línea decorativa frutal -->
+        <div class="footer-decoration">
+            <span style="background: #FF6B6B"></span>
+            <span style="background: #6B5B95"></span>
+            <span style="background: #FFD700"></span>
+        </div>
+    </footer>
+    <script src="HBA.js"></script>
   </body>
 </html>
